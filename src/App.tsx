@@ -8,7 +8,7 @@ import Settings from "./pages/Settings/Settings";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/SpiritDex">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collection" element={<Collection />} />

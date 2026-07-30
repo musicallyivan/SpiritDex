@@ -9,9 +9,10 @@ export function getSpiritImage(
   const image =
     spirit.images[
       variant.toLowerCase() as keyof typeof spirit.images
-    ];
+    ] ?? spirit.images.normal;
 
 
-  return image ?? spirit.images.normal;
+  return import.meta.env.BASE_URL +
+    image.replace(/^\//, "");
 
 }

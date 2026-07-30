@@ -6,19 +6,15 @@ export function getSpiritVariantImage(
   variant?: string
 ) {
 
+  const image =
+    !variant
+      ? spirit.images.normal
+      : spirit.images[
+          variant.toLowerCase() as keyof typeof spirit.images
+        ] ?? spirit.images.normal;
 
-  if (!variant) {
-    return spirit.images.normal;
-  }
 
-
-  const key = variant.toLowerCase() as keyof typeof spirit.images;
-
-
-  return (
-    spirit.images[key]
-    ??
-    spirit.images.normal
-  );
+  return import.meta.env.BASE_URL +
+    image.replace(/^\//, "");
 
 }

@@ -1,6 +1,6 @@
 import type { Spirit } from "../../models/Spirit";
 import { useCollectionStore } from "../../store/useCollectionStore";
-
+import { getSpiritVariantImage } from "../../utils/getSpiritVariantImage";
 
 interface Props {
   spirit: Spirit;
@@ -30,6 +30,12 @@ export default function SpiritCard({ spirit }: Props) {
 
   const lost = userSpirit?.lost ?? false;
 
+  const image =
+    getSpiritVariantImage(
+      spirit,
+      spirit.variant
+    );
+
   const masteryPercent = 
     (mastery / spirit.maxMastery) * 100;
 
@@ -58,7 +64,7 @@ export default function SpiritCard({ spirit }: Props) {
         justify-center
       ">
         <img
-          src={spirit.images.normal}
+          src={image}
           alt={spirit.name}
           onError={(e) => {
             e.currentTarget.src =

@@ -485,10 +485,10 @@ export const spirits: Spirit[] = [
       "/sprites/rey/oro.webp",
 
       gominola:
-      "sprites/rey/gominola.webp",
+      "/sprites/rey/gominola.webp",
 
       galaxia:
-      "sprites/rey/galaxia.webp",
+      "/sprites/rey/galaxia.webp",
 
       holografico:
       "/sprites/rey/holografico.webp"
