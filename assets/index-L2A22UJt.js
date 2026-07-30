@@ -25,7 +25,7 @@ Error generating stack: `+e.message+`
       `,children:e}),(0,j.jsx)(`p`,{className:`\r
         text-3xl\r
         font-bold\r
-      `,children:t})]})}function en(){return(0,j.jsxs)(Vt,{children:[(0,j.jsx)(`h1`,{className:`text-5xl font-bold`,children:`Inicio`}),(0,j.jsx)(`p`,{className:`text-slate-400 mt-2`,children:`Bienvenido a SpiritDex`}),(0,j.jsx)(Qt,{})]})}function tn({spirit:e}){let t=Zt(t=>t.collection[e.id]),n=Zt(e=>e.updateSpirit),r=t?.level??1,i=t?.owned??!1,a=t?.favorite??!1,o=t?.mastery??0,s=t?.lost??!1,c=o/e.maxMastery*100,l=o>=e.maxMastery;return(0,j.jsxs)(`div`,{className:`\r
+      `,children:t})]})}function en(){return(0,j.jsxs)(Vt,{children:[(0,j.jsx)(`h1`,{className:`text-5xl font-bold`,children:`Inicio`}),(0,j.jsx)(`p`,{className:`text-slate-400 mt-2`,children:`Bienvenido a SpiritDex`}),(0,j.jsx)(Qt,{})]})}function tn(e,t){return`/SpiritDex/`+(t?e.images[t.toLowerCase()]??e.images.normal:e.images.normal).replace(/^\//,``)}function nn({spirit:e}){let t=Zt(t=>t.collection[e.id]),n=Zt(e=>e.updateSpirit),r=t?.level??1,i=t?.owned??!1,a=t?.favorite??!1,o=t?.mastery??0,s=t?.lost??!1,c=tn(e,e.variant),l=o/e.maxMastery*100,u=o>=e.maxMastery;return(0,j.jsxs)(`div`,{className:`\r
       bg-slate-900\r
       border\r
       border-slate-700\r
@@ -40,7 +40,7 @@ Error generating stack: `+e.message+`
         flex\r
         items-center\r
         justify-center\r
-      `,children:(0,j.jsx)(`img`,{src:e.images.normal,alt:e.name,onError:e=>{e.currentTarget.src=`/sprites/default.png`},className:`\r
+      `,children:(0,j.jsx)(`img`,{src:c,alt:e.name,onError:e=>{e.currentTarget.src=`/sprites/default.png`},className:`\r
             w-full\r
             h-full\r
             object-contain\r
@@ -50,7 +50,7 @@ Error generating stack: `+e.message+`
           px-3\r
           py-1\r
           rounded-lg\r
-          `,children:`Subir nivel`})]}),(0,j.jsxs)(`div`,{className:`mt-4`,children:[(0,j.jsxs)(`div`,{className:`flex justify-between text-sm`,children:[(0,j.jsx)(`span`,{children:r===5?`👑 Maestría`:`🔒 Maestría bloqueada`}),(0,j.jsxs)(`span`,{className:l?`text-yellow-400`:`text-slate-400`,children:[o,`/`,e.maxMastery]})]}),r===5&&(0,j.jsx)(`div`,{className:`\r
+          `,children:`Subir nivel`})]}),(0,j.jsxs)(`div`,{className:`mt-4`,children:[(0,j.jsxs)(`div`,{className:`flex justify-between text-sm`,children:[(0,j.jsx)(`span`,{children:r===5?`👑 Maestría`:`🔒 Maestría bloqueada`}),(0,j.jsxs)(`span`,{className:u?`text-yellow-400`:`text-slate-400`,children:[o,`/`,e.maxMastery]})]}),r===5&&(0,j.jsx)(`div`,{className:`\r
             h-2\r
             bg-slate-700\r
             rounded-full\r
@@ -59,7 +59,7 @@ Error generating stack: `+e.message+`
           `,children:(0,j.jsx)(`div`,{className:`\r
                 h-full\r
                 bg-yellow-400\r
-              `,style:{width:`${c}%`}})})]}),(0,j.jsxs)(`div`,{className:`mt-4 flex gap-3`,children:[(0,j.jsx)(`button`,{onClick:()=>n(e.id,{owned:!i}),className:`
+              `,style:{width:`${l}%`}})})]}),(0,j.jsxs)(`div`,{className:`mt-4 flex gap-3`,children:[(0,j.jsx)(`button`,{onClick:()=>n(e.id,{owned:!i}),className:`
           px-3 py-1 rounded-lg
           ${i?`bg-green-500`:`bg-slate-700`}
           `,children:i?`✔ Tengo`:`No tengo`}),(0,j.jsxs)(`button`,{onClick:()=>n(e.id,{lost:!s}),className:`
@@ -74,7 +74,7 @@ Error generating stack: `+e.message+`
           px-3\r
           py-1\r
           rounded-lg\r
-          `,children:a?`❤️`:`🤍`})]})]})}var nn=Jt(e=>({search:``,filter:`all`,element:`Todos`,rarity:`Todas`,sort:`name`,setSearch:t=>e({search:t}),setFilter:t=>e({filter:t}),setElement:t=>e({element:t}),setRarity:t=>e({rarity:t}),setSort:t=>e({sort:t})})),rn=Jt(e=>({view:`modern`,setView:t=>e({view:t})}));function an(e){switch(e){case`Raro`:return`border-blue-400`;case`Epico`:return`border-purple-500`;case`Legendario`:return`border-orange-500`;case`Mitico`:return`border-yellow-400`;default:return`border-slate-700`}}var on=[`Normal`,`Oro`,`Gominola`,`Galaxia`,`Gema`,`Cubo`,`Cuac`,`Holografico`];function sn({spirit:e,onClose:t}){let n=Zt(t=>t.collection[e.id]),r=Zt(e=>e.updateSpirit),i=n?.level??1,a=n?.favorite??!1,o=n?.lost??!1,s=n?.variant??`Normal`,c=n?.mastery??0,l=[1,2,3,4,5];function u(t){r(e.id,{level:t})}function d(){r(e.id,{favorite:!a})}function f(){r(e.id,{lost:!o})}function p(t){r(e.id,{variant:t})}function m(t){let n=Math.min(20,c+t);r(e.id,{mastery:n})}return(0,j.jsx)(`div`,{onClick:t,className:`\r
+          `,children:a?`❤️`:`🤍`})]})]})}var rn=Jt(e=>({search:``,filter:`all`,element:`Todos`,rarity:`Todas`,sort:`name`,setSearch:t=>e({search:t}),setFilter:t=>e({filter:t}),setElement:t=>e({element:t}),setRarity:t=>e({rarity:t}),setSort:t=>e({sort:t})})),an=Jt(e=>({view:`modern`,setView:t=>e({view:t})}));function on(e){switch(e){case`Raro`:return`border-blue-400`;case`Epico`:return`border-purple-500`;case`Legendario`:return`border-orange-500`;case`Mitico`:return`border-yellow-400`;default:return`border-slate-700`}}var sn=[`Normal`,`Oro`,`Gominola`,`Galaxia`,`Gema`,`Cubo`,`Cuac`,`Holografico`];function cn({spirit:e,onClose:t}){let n=Zt(t=>t.collection[e.id]),r=Zt(e=>e.updateSpirit),i=n?.level??1,a=n?.favorite??!1,o=n?.lost??!1,s=n?.variant??`Normal`,c=n?.mastery??0,l=[1,2,3,4,5];function u(t){r(e.id,{level:t})}function d(){r(e.id,{favorite:!a})}function f(){r(e.id,{lost:!o})}function p(t){r(e.id,{variant:t})}function m(t){let n=Math.min(20,c+t);r(e.id,{mastery:n})}return(0,j.jsx)(`div`,{onClick:t,className:`\r
       fixed\r
       inset-0\r
       bg-black/70\r
@@ -147,13 +147,13 @@ Error generating stack: `+e.message+`
         px-4\r
         py-2\r
         rounded-lg\r
-        `,children:on.map(e=>(0,j.jsx)(`option`,{value:e,children:e},e))})]}),(0,j.jsx)(`button`,{onClick:t,className:`\r
+        `,children:sn.map(e=>(0,j.jsx)(`option`,{value:e,children:e},e))})]}),(0,j.jsx)(`button`,{onClick:t,className:`\r
         bg-slate-700\r
         px-4\r
         py-2\r
         rounded-lg\r
         mt-5\r
-        `,children:`Cerrar`})]})})}function cn(e,t){return`/SpiritDex/`+(t?e.images[t.toLowerCase()]??e.images.normal:e.images.normal).replace(/^\//,``)}var ln=sn;function un({spirit:e}){let[t,n]=(0,_.useState)(!1),r=Zt(t=>t.collection[e.id]),i=r?.level??1,a=r?.lost??!1,o=r?.favorite??!1,s=i===5&&(r?.mastery??0)>=20,c=r?.variant??`Normal`,l=cn(e,c);return(0,j.jsxs)(`div`,{onClick:()=>n(!0),className:`
+        `,children:`Cerrar`})]})})}var ln=cn;function un({spirit:e}){let[t,n]=(0,_.useState)(!1),r=Zt(t=>t.collection[e.id]),i=r?.level??1,a=r?.lost??!1,o=r?.favorite??!1,s=i===5&&(r?.mastery??0)>=20,c=r?.variant??`Normal`,l=tn(e,c);return(0,j.jsxs)(`div`,{onClick:()=>n(!0),className:`
       relative
       rounded-xl
       p-2
@@ -161,7 +161,7 @@ Error generating stack: `+e.message+`
 
       border-2
 
-      ${an(e.rarity)}
+      ${on(e.rarity)}
 
       ${s?`shadow-lg shadow-yellow-400`:``}
 
@@ -240,7 +240,7 @@ Error generating stack: `+e.message+`
       `,children:[(0,j.jsx)(`thead`,{children:(0,j.jsxs)(`tr`,{children:[(0,j.jsx)(`th`,{className:`\r
               text-left\r
               p-3\r
-            `,children:`Espíritu`}),on.map(e=>(0,j.jsx)(`th`,{className:`\r
+            `,children:`Espíritu`}),sn.map(e=>(0,j.jsx)(`th`,{className:`\r
                   p-3\r
                   text-sm\r
                   `,children:e},e))]})}),(0,j.jsx)(`tbody`,{children:Ht.map(e=>(0,j.jsxs)(`tr`,{className:`\r
@@ -249,7 +249,7 @@ Error generating stack: `+e.message+`
               `,children:[(0,j.jsx)(`td`,{className:`\r
                 p-3\r
                 font-bold\r
-              `,children:e.name}),on.map(t=>(0,j.jsx)(`td`,{className:`\r
+              `,children:e.name}),sn.map(t=>(0,j.jsx)(`td`,{className:`\r
                       p-2\r
                       text-center\r
                       `,children:(0,j.jsx)(`div`,{className:`\r
@@ -260,17 +260,17 @@ Error generating stack: `+e.message+`
                         flex\r
                         items-center\r
                         justify-center\r
-                      `,children:(0,j.jsx)(`img`,{src:cn(e,t),alt:`${e.name} ${t}`,className:`\r
+                      `,children:(0,j.jsx)(`img`,{src:tn(e,t),alt:`${e.name} ${t}`,className:`\r
                           w-full\r
                           h-full\r
                           object-contain\r
-                          `,onError:e=>{e.currentTarget.style.opacity=`0.2`}})})},t))]},e.id))})]})})}function fn(){let e=rn(e=>e.view),t=Zt(e=>e.collection),{search:n,filter:r,element:i,rarity:a,sort:o}=nn(),s=[...Ht.filter(e=>{let o=t[e.id],s=e.name.toLowerCase().includes(n.toLowerCase()),c=i===`Todos`||e.element===i,l=a===`Todas`||e.rarity===a;return!s||!c||!l?!1:r===`owned`?o?.owned:r===`lost`?o?.lost:r===`mastery`?o?.level===5&&(o?.mastery??0)>=20:r!==`favorite`||o?.favorite})].sort((e,n)=>{let r=t[e.id],i=t[n.id];return o===`name`?e.name.localeCompare(n.name):o===`level`?(i?.level??1)-(r?.level??1):o===`mastery`?(i?.mastery??0)-(r?.mastery??0):o===`rarity`?e.rarity.localeCompare(n.rarity):o===`element`?e.element.localeCompare(n.element):0});return e===`table`?(0,j.jsx)(dn,{}):(0,j.jsx)(`div`,{className:`
+                          `,onError:e=>{e.currentTarget.style.opacity=`0.2`}})})},t))]},e.id))})]})})}function fn(){let e=an(e=>e.view),t=Zt(e=>e.collection),{search:n,filter:r,element:i,rarity:a,sort:o}=rn(),s=[...Ht.filter(e=>{let o=t[e.id],s=e.name.toLowerCase().includes(n.toLowerCase()),c=i===`Todos`||e.element===i,l=a===`Todas`||e.rarity===a;return!s||!c||!l?!1:r===`owned`?o?.owned:r===`lost`?o?.lost:r===`mastery`?o?.level===5&&(o?.mastery??0)>=20:r!==`favorite`||o?.favorite})].sort((e,n)=>{let r=t[e.id],i=t[n.id];return o===`name`?e.name.localeCompare(n.name):o===`level`?(i?.level??1)-(r?.level??1):o===`mastery`?(i?.mastery??0)-(r?.mastery??0):o===`rarity`?e.rarity.localeCompare(n.rarity):o===`element`?e.element.localeCompare(n.element):0});return e===`table`?(0,j.jsx)(dn,{}):(0,j.jsx)(`div`,{className:`
     grid
     gap-6
 
     ${e===`modern`?`grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4`:`grid-cols-3 sm:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9`}
 
-    `,children:s.map(t=>e===`modern`?(0,j.jsx)(tn,{spirit:t},t.id):(0,j.jsx)(un,{spirit:t},t.id))})}function pn(){let{view:e,setView:t}=rn();return(0,j.jsxs)(`div`,{className:`flex gap-3 mb-6`,children:[(0,j.jsx)(`button`,{onClick:()=>t(`modern`),className:`
+    `,children:s.map(t=>e===`modern`?(0,j.jsx)(nn,{spirit:t},t.id):(0,j.jsx)(un,{spirit:t},t.id))})}function pn(){let{view:e,setView:t}=an();return(0,j.jsxs)(`div`,{className:`flex gap-3 mb-6`,children:[(0,j.jsx)(`button`,{onClick:()=>t(`modern`),className:`
           px-4
           py-2
           rounded-lg
@@ -289,7 +289,7 @@ Error generating stack: `+e.message+`
         px-4\r
         py-2\r
         rounded-lg\r
-        `,children:`📊 Variantes`})]})}var mn=[`Agua`,`Fuego`,`Tierra`,`Aire`,`Pescado`,`Pato`,`Fantasma`,`Demonio`,`Rey`,`Aura`,`Futbolista`,`Sueño`,`Punk`,`Jefe`,`Siete`,`Batman`,`Parca`,`Punto cero`,`Cacahuete`,`Vini Jr.`,`Pollo`],hn=[`Raro`,`Epico`,`Legendario`,`Mitico`];function gn(){let{search:e,filter:t,element:n,rarity:r,sort:i,setSearch:a,setElement:o,setRarity:s,setFilter:c,setSort:l}=nn();return(0,j.jsxs)(`div`,{className:`flex flex-wrap gap-4 mb-8`,children:[(0,j.jsx)(`input`,{value:e,onChange:e=>a(e.target.value),placeholder:`🔎 Buscar espíritu...`,className:`bg-slate-800 rounded-lg px-4 py-2 w-64`}),(0,j.jsxs)(`select`,{value:t,onChange:e=>c(e.target.value),className:`bg-slate-800 rounded-lg px-4 py-2`,children:[(0,j.jsx)(`option`,{value:`all`,children:`Todos`}),(0,j.jsx)(`option`,{value:`owned`,children:`Conseguidos`}),(0,j.jsx)(`option`,{value:`lost`,children:`Perdidos`}),(0,j.jsx)(`option`,{value:`mastery`,children:`Maestría`})]}),(0,j.jsxs)(`select`,{value:n,onChange:e=>o(e.target.value),className:`bg-slate-800 rounded-lg px-4 py-2`,children:[(0,j.jsx)(`option`,{children:`Todos`}),mn.map(e=>(0,j.jsx)(`option`,{children:e},e))]}),(0,j.jsxs)(`select`,{value:r,onChange:e=>s(e.target.value),className:`bg-slate-800 rounded-lg px-4 py-2`,children:[(0,j.jsx)(`option`,{children:`Todas`}),hn.map(e=>(0,j.jsx)(`option`,{children:e},e))]}),(0,j.jsxs)(`select`,{value:i,onChange:e=>l(e.target.value),className:`\r
+        `,children:`📊 Variantes`})]})}var mn=[`Agua`,`Fuego`,`Tierra`,`Aire`,`Pescado`,`Pato`,`Fantasma`,`Demonio`,`Rey`,`Aura`,`Futbolista`,`Sueño`,`Punk`,`Jefe`,`Siete`,`Batman`,`Parca`,`Punto cero`,`Cacahuete`,`Vini Jr.`,`Pollo`],hn=[`Raro`,`Epico`,`Legendario`,`Mitico`];function gn(){let{search:e,filter:t,element:n,rarity:r,sort:i,setSearch:a,setElement:o,setRarity:s,setFilter:c,setSort:l}=rn();return(0,j.jsxs)(`div`,{className:`flex flex-wrap gap-4 mb-8`,children:[(0,j.jsx)(`input`,{value:e,onChange:e=>a(e.target.value),placeholder:`🔎 Buscar espíritu...`,className:`bg-slate-800 rounded-lg px-4 py-2 w-64`}),(0,j.jsxs)(`select`,{value:t,onChange:e=>c(e.target.value),className:`bg-slate-800 rounded-lg px-4 py-2`,children:[(0,j.jsx)(`option`,{value:`all`,children:`Todos`}),(0,j.jsx)(`option`,{value:`owned`,children:`Conseguidos`}),(0,j.jsx)(`option`,{value:`lost`,children:`Perdidos`}),(0,j.jsx)(`option`,{value:`mastery`,children:`Maestría`})]}),(0,j.jsxs)(`select`,{value:n,onChange:e=>o(e.target.value),className:`bg-slate-800 rounded-lg px-4 py-2`,children:[(0,j.jsx)(`option`,{children:`Todos`}),mn.map(e=>(0,j.jsx)(`option`,{children:e},e))]}),(0,j.jsxs)(`select`,{value:r,onChange:e=>s(e.target.value),className:`bg-slate-800 rounded-lg px-4 py-2`,children:[(0,j.jsx)(`option`,{children:`Todas`}),hn.map(e=>(0,j.jsx)(`option`,{children:e},e))]}),(0,j.jsxs)(`select`,{value:i,onChange:e=>l(e.target.value),className:`\r
       bg-slate-800\r
       rounded-lg\r
       px-4\r
@@ -411,7 +411,7 @@ Error generating stack: `+e.message+`
           text-center
           border-2
 
-          ${an(e)}
+          ${on(e)}
 
           `,children:[(0,j.jsx)(`p`,{className:`text-slate-400`,children:e}),(0,j.jsx)(`p`,{className:`\r
             text-3xl\r
@@ -529,7 +529,7 @@ Error generating stack: `+e.message+`
       rounded-xl\r
       p-4\r
       text-center\r
-    `,children:[(0,j.jsxs)(`div`,{children:[`🌀`,(0,j.jsx)(`br`,{}),t,`/`,Ht.length]}),(0,j.jsxs)(`div`,{children:[`📈`,(0,j.jsx)(`br`,{}),a,`%`]}),(0,j.jsxs)(`div`,{children:[`👑`,(0,j.jsx)(`br`,{}),n]}),(0,j.jsxs)(`div`,{children:[`💀`,(0,j.jsx)(`br`,{}),r]}),(0,j.jsxs)(`div`,{children:[`❤️`,(0,j.jsx)(`br`,{}),i]})]})}var Sn=Jt(e=>({size:`square`,setSize:t=>e({size:t})})),Cn=Jt(e=>({filter:`all`,setFilter:t=>e({filter:t})}));function wn(e){switch(e){case`Agua`:return`from-blue-600/40`;case`Fuego`:return`from-red-600/40`;case`Tierra`:return`from-green-600/40`;case`Aire`:return`from-sky-500/40`;case`Pescado`:return`from-cyan-500/40`;case`Pato`:return`from-yellow-400/40`;case`Fantasma`:return`from-purple-600/40`;case`Demonio`:return`from-red-900/40`;case`Rey`:return`from-amber-500/40`;case`Aura`:return`from-pink-500/40`;case`Futbolista`:return`from-green-500/40`;case`Sueño`:return`from-indigo-500/40`;case`Punk`:return`from-fuchsia-600/40`;case`Jefe`:return`from-orange-600/40`;case`Siete`:return`from-violet-500/40`;case`Batman`:return`from-slate-800/40`;case`Parca`:return`from-gray-700/40`;case`Punto cero`:return`from-cyan-400/40`;case`Cacahuete`:return`from-amber-700/40`;case`Vini Jr.`:return`from-lime-500/40`;case`Pollo`:return`from-orange-400/40`;default:return`from-slate-700/40`}}function Tn({spirit:e}){let t=Zt(t=>t.collection[e.id]),n=t?.level??1,r=t?.favorite??!1,i=t?.lost??!1,a=t?.level===5&&(t?.mastery??0)>=20,o=t?.variant??`Normal`,s=an(e.rarity),c=wn(e.element),l=cn(e,o);return(0,j.jsxs)(`div`,{className:`
+    `,children:[(0,j.jsxs)(`div`,{children:[`🌀`,(0,j.jsx)(`br`,{}),t,`/`,Ht.length]}),(0,j.jsxs)(`div`,{children:[`📈`,(0,j.jsx)(`br`,{}),a,`%`]}),(0,j.jsxs)(`div`,{children:[`👑`,(0,j.jsx)(`br`,{}),n]}),(0,j.jsxs)(`div`,{children:[`💀`,(0,j.jsx)(`br`,{}),r]}),(0,j.jsxs)(`div`,{children:[`❤️`,(0,j.jsx)(`br`,{}),i]})]})}var Sn=Jt(e=>({size:`square`,setSize:t=>e({size:t})})),Cn=Jt(e=>({filter:`all`,setFilter:t=>e({filter:t})}));function wn(e){switch(e){case`Agua`:return`from-blue-600/40`;case`Fuego`:return`from-red-600/40`;case`Tierra`:return`from-green-600/40`;case`Aire`:return`from-sky-500/40`;case`Pescado`:return`from-cyan-500/40`;case`Pato`:return`from-yellow-400/40`;case`Fantasma`:return`from-purple-600/40`;case`Demonio`:return`from-red-900/40`;case`Rey`:return`from-amber-500/40`;case`Aura`:return`from-pink-500/40`;case`Futbolista`:return`from-green-500/40`;case`Sueño`:return`from-indigo-500/40`;case`Punk`:return`from-fuchsia-600/40`;case`Jefe`:return`from-orange-600/40`;case`Siete`:return`from-violet-500/40`;case`Batman`:return`from-slate-800/40`;case`Parca`:return`from-gray-700/40`;case`Punto cero`:return`from-cyan-400/40`;case`Cacahuete`:return`from-amber-700/40`;case`Vini Jr.`:return`from-lime-500/40`;case`Pollo`:return`from-orange-400/40`;default:return`from-slate-700/40`}}function Tn({spirit:e}){let t=Zt(t=>t.collection[e.id]),n=t?.level??1,r=t?.favorite??!1,i=t?.lost??!1,a=t?.level===5&&(t?.mastery??0)>=20,o=t?.variant??`Normal`,s=on(e.rarity),c=wn(e.element),l=tn(e,o);return(0,j.jsxs)(`div`,{className:`
         relative
         rounded-xl
         border-2
