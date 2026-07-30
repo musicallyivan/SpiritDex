@@ -153,7 +153,7 @@ Error generating stack: `+e.message+`
         py-2\r
         rounded-lg\r
         mt-5\r
-        `,children:`Cerrar`})]})})}function cn(e,t){if(!t)return e.images.normal;let n=t.toLowerCase();return e.images[n]??e.images.normal}var ln=sn;function un({spirit:e}){let[t,n]=(0,_.useState)(!1),r=Zt(t=>t.collection[e.id]),i=r?.level??1,a=r?.lost??!1,o=r?.favorite??!1,s=i===5&&(r?.mastery??0)>=20,c=r?.variant??`Normal`,l=cn(e,c);return(0,j.jsxs)(`div`,{onClick:()=>n(!0),className:`
+        `,children:`Cerrar`})]})})}function cn(e,t){return`/SpiritDex/`+(t?e.images[t.toLowerCase()]??e.images.normal:e.images.normal).replace(/^\//,``)}var ln=sn;function un({spirit:e}){let[t,n]=(0,_.useState)(!1),r=Zt(t=>t.collection[e.id]),i=r?.level??1,a=r?.lost??!1,o=r?.favorite??!1,s=i===5&&(r?.mastery??0)>=20,c=r?.variant??`Normal`,l=cn(e,c);return(0,j.jsxs)(`div`,{onClick:()=>n(!0),className:`
       relative
       rounded-xl
       p-2
